@@ -1,0 +1,19 @@
+@import "../../../styles/custom-media.css";
+
+.centerBlocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #4582b4;
+}
+
+.blockItem {
+  width: auto;
+
+  @media (--media-min-large) {
+    width: 25%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
