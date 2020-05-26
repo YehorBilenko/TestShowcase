@@ -1,15 +1,15 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Container from '../components/container'
+import Container from '../containers/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import ProjectPreviewGrid from '../components/project-preview-grid'
+import ProjectPreviewGrid from '../components/assets/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Button from '../components/footer/Button.jsx'
 import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
 import AboutBlock from '../components/about/AboutBlock.jsx'
 import {responsiveTitle1} from '../components/typography.module.css'
-import {center, centerBlocks} from '../components/container.module.css'
+import {center} from '../containers/styles/container.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {

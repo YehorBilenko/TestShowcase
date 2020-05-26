@@ -1,11 +1,11 @@
 import React from 'react'
-import {cn, buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import BlockText from './blocks/block-text'
-import Button from './footer/Button.jsx'
+import {cn, buildImageObj} from '../../lib/helpers'
+import {imageUrlFor} from '../../lib/image-url'
+import BlockText from '../blocks/block-text'
+import Button from '../footer/Button.jsx'
 
-import styles from './project-preview.module.css'
-import {responsiveTitle3} from './typography.module.css'
+import styles from './styles/project-preview.module.css'
+import {responsiveTitle3} from '../typography.module.css'
 
 function ProjectPreview (props) {
   return (

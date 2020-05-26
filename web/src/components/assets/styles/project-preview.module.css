@@ -1,4 +1,4 @@
-@import "../styles/custom-media.css";
+@import "../../../styles/custom-media.css";
 
 .root {
   display: block;
@@ -11,7 +11,7 @@
 }
 
 .title {
-  composes: responsiveTitle1 from "./typography.module.css";
+  composes: responsiveTitle1 from "../../typography.module.css";
 }
 
 .leadMediaThumb {
