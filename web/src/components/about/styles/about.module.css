@@ -10,10 +10,10 @@
 
 .blockItem {
   width: auto;
+  margin-right: 15px;
+  margin-left: 15px;
 
   @media (--media-min-large) {
     width: 25%;
-    margin-right: 15px;
-    margin-left: 15px;
   }
 }

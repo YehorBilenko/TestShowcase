@@ -1,7 +1,7 @@
 import {Link} from 'gatsby'
 import React from 'react'
 
-import styles from './header.module.css'
+import styles from './styles/header.module.css'
 
 const Header = ({siteTitle}) => (
   <div id='top' className={styles.root}>

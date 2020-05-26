@@ -1,8 +1,8 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Container from '../components/container'
+import Container from '../containers/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import Project from '../components/project'
+import Project from '../components/assets/project'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
@@ -11,10 +11,7 @@ export const query = graphql`
     sampleProject: sanitySampleProject(id: {eq: $id}) {
       id
       publishedAt
-      categories {
-        _id
-        title
-      }
+
       relatedProjects {
         title
         _id

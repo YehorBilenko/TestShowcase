@@ -1,13 +1,13 @@
 import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
 import {Link} from 'gatsby'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import BlockContent from './blocks/block-content'
-import Container from './container'
-import RoleList from './role-list'
+import {buildImageObj} from '../../lib/helpers'
+import {imageUrlFor} from '../../lib/image-url'
+import BlockContent from '../blocks/block-content'
+import Container from '../../containers/container'
+import RoleList from '../role-list'
 
-import styles from './project.module.css'
+import styles from './styles/project.module.css'
 
 function Project (props) {
   const {_rawBody, title, categories, mainImage, members, publishedAt, relatedProjects} = props

@@ -3,7 +3,7 @@ import Header from './header'
 import {Link} from 'gatsby'
 
 import '../styles/layout.css'
-import styles from './layout.module.css'
+import styles from './styles/layout.module.css'
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]')
