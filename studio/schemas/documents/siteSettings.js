@@ -35,7 +35,8 @@ export default {
       type: 'reference',
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
-      to: [{type: 'person'}]
+      to: [{type: 'person'}],
+      validation: Rule => Rule.required()
     }
   ]
 }
