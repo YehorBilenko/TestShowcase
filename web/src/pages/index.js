@@ -73,7 +73,6 @@ const ArchivePage = props => {
         <AboutBlock aboutBlocks={aboutBlocks} />
       </Container>
       <Container>
-        <h1 className={responsiveTitle1}>Assets</h1>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}
       </Container>
       <Container>
