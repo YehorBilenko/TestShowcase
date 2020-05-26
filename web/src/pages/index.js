@@ -13,6 +13,11 @@ import {center} from '../containers/styles/container.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {
+    siteSettings: sanitySiteSettings {
+      author {
+        email
+      }
+    }
     aboutBlocks: allSanityAbout {
       edges {
         node {
@@ -50,6 +55,7 @@ export const query = graphql`
 
 const ArchivePage = props => {
   const {data, errors} = props
+  const email = data && data.siteSettings.author && data.siteSettings.author.email
   const projects = data && data.projects && mapEdgesToNodes(data.projects)
   const aboutBlocks = data && data.aboutBlocks && mapEdgesToNodes(data.aboutBlocks)
   if (errors) {
@@ -72,7 +78,7 @@ const ArchivePage = props => {
       </Container>
       <Container>
         <div className={center}>
-          <Button color='blue' text='Contact us' mailTo='lightdev@gmail.com' />
+          <Button color='blue' text='Contact us' mailTo={email} />
         </div>
       </Container>
     </Layout>

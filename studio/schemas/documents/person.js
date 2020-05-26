@@ -12,6 +12,18 @@ export default {
       title: 'Name'
     },
     {
+      title: 'E-mail address',
+      name: 'email',
+      type: 'string',
+      validation: Rule =>
+        Rule.custom(email => {
+          const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return (
+            pattern.test(String(email).toLowerCase()) || 'Please, provide a valid e-mail address!'
+          )
+        }).required()
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
