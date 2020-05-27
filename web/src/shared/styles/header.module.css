@@ -24,7 +24,7 @@
   font-weight: 600;
   flex: 1;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 54px;
+  font-size: 48px;
 
   @nest & a {
     display: inline-block;
