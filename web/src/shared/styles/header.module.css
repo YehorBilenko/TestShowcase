@@ -5,6 +5,7 @@
   /* position: fixed; */
   z-index: 100;
   width: 100%;
+  background: var(--color-accent);
 }
 
 .wrapper {
@@ -27,7 +28,7 @@
 
   @nest & a {
     display: inline-block;
-    color: var(--color-accent);
+    color: var(--color-black);
     text-decoration: none;
     transition: var(--hover-color);
 
