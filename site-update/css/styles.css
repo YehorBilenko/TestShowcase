@@ -200,12 +200,16 @@ body {
 }
 .wrapper .screen .social-btns .contact p {
   font-size: 0;
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 .wrapper .screen .social-btns .contact:hover {
   font-size: 61;
   color: white;
   background-color: black;
   width: 310px;
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 .wrapper .screen .social-btns .contact:hover p {
   font-size: 22px;
