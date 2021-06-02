@@ -26,10 +26,9 @@ $iconbackhover: rgb(0, 0, 0) !global;
 /*--------------------*//*--------------------*//*--------------------*/
 $borderradius: 12px;
 $btnssize: 80px;
-$iconsize:46;
-$iconsizehover:61;
 
-
+$iconsize:46px;
+$iconsizehover:61px;
 /*--------------------*//*--------------------*//*--------------------*/
 html {
   overflow: scroll;
@@ -41,12 +40,7 @@ html {
   background: transparent;  
 }
 body{
-  //Raleway
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap');
-
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-  @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
 
   font-family: 'Nanum Gothic', sans-serif;
   background-color: $screenbackground;
@@ -70,8 +64,6 @@ body{
   align-items: center;
 	flex-direction: column;
 	min-height: 70vh;
- 
-
 
   .header{
     display: flex;
@@ -137,6 +129,7 @@ body{
   
         border-radius: $borderradius;
         background-color:$iconback;
+        
         font-size: $iconsize;
         color: $color;
         i{
@@ -233,6 +226,22 @@ body{
     background-color: $screenbackground;
     justify-content: center;
     align-items: center;
+
+    a{
+      color: black;
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      transition: background-size .3s;
+      transition: .3s;
+    
+      &:hover{
+        color: black;
+        background-size: 100% 2px; 
+      }
+    }
     h5{
       margin: 0;
       padding-right: 100px;
@@ -242,18 +251,15 @@ body{
         padding: 5;
         padding-right: 25px;
         padding-left: 25px;
-        
-
       }
     }
     h3{
       margin: 0;
       padding-right: 100px;
       padding-left: 100px;
-      font-size: 18;
+      font-size: 18px;
       padding-bottom: 35px;
       @media (orientation: portrait) {
-
         padding: 5;
         padding-right: 25px;
         padding-left: 25px;
@@ -290,21 +296,7 @@ html {
   }
 }
 
-a{
-  color: black;
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: background-size .3s;
-  transition: .3s;
 
-  &:hover{
-    color: black;
-    background-size: 100% 2px; 
-  }
-}
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
@@ -351,6 +343,20 @@ small {
   padding: 2rem;
   a{
     color: rgb(112, 92, 0);
+  }
+  a{
+
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .3s;
+    transition: .3s;
+  
+    &:hover{
+      background-size: 100% 2px; 
+    }
   }
 }
 
