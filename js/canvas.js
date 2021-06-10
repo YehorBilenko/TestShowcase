@@ -1,4 +1,5 @@
 var c = document.getElementById("canvas");
+var cursor = document.getElementById("cursor");
 var ctx = c.getContext("2d");
 
 function resize() {
@@ -6,23 +7,26 @@ function resize() {
 	c.width = box.width;
 	c.height = box.height;
 }
+var w = window.innerWidth;
+var h = window.innerHeight;
 
 var light = {
-	x: 160,
-	y: 200
+	x: w/2,
+	y: h/2
 }//точка появления лампочки при загрузек страници 
 
-var colors = ["#ea970b", "#1fac9b", "#d61c89"]; //масив с цветами 
+console.log(w)
+var colors = ["#2C2B2B", "#FFBFE2", "#EDF1F5"]; //масив с цветами 
 //цвет летающей хуйни 
 
 function drawLight() {
 	ctx.beginPath();
 
     // хрень для рисования света вокруг курсора на мєто не нужно 
-    ctx.arc(light.x, light.y, 800, 0, 2 * Math.PI); //первое значение это радиус градиента вокруг второе значение хуй пойми что как и
+    ctx.arc(light.x, light.y, 700, 0, 2 * Math.PI); //первое значение это радиус градиента вокруг второе значение хуй пойми что как и
 	var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
-	gradient.addColorStop(0, "#3b5e98"); //градиент цвет центра 
-	gradient.addColorStop(1, "#3b5e98"); //градиент цвет внешний
+	gradient.addColorStop(0, "#FFBF27"); //градиент цвет центра 
+	gradient.addColorStop(1, "#2C2B2B"); //градиент цвет внешний
 	ctx.fillStyle = gradient;
 	ctx.fill();
     
@@ -121,15 +125,32 @@ function Box() {
 			ctx.lineTo(points[n].startX, points[n].startY);
 			ctx.lineTo(points[n].endX, points[n].endY);
 			ctx.lineTo(points[i].endX, points[i].endY);
-			ctx.fillStyle = "#BE163E"; //цвет тени 
+			ctx.fillStyle = "#2C2B2B"; //цвет тени 
 			ctx.fill();
 		};
 	}
 }
 
 var boxes = [];
+var lightPositionLerp = 2 //чем больше значение тем выше плвная скорость перемещения курсора 
+var lastTime = Date.now();
+var lightNewPos = {
+	x: w/2,
+	y: h/2
+}//точка появления лампочки при загрузек страници 
+
+function lerp(start, end, t) {
+	t = Math.min(t, 1) 
+    return start * (1 - t) + end * t;
+}
 
 function draw() {
+
+	var dt = (Date.now() - lastTime) / 1000
+	lastTime = Date.now()
+	light.x = lerp(light.x, lightNewPos.x, dt * lightPositionLerp)
+	light.y = lerp(light.y, lightNewPos.y, dt * lightPositionLerp)
+
 	ctx.clearRect(0, 0, c.width, c.height);
   drawLight();
 	for (var i = 0; i < boxes.length; i++) {
@@ -150,14 +171,14 @@ while (boxes.length < 14) {
 	boxes.push(new Box());
 }
 
-window.onresize = resize;
-c.onmousemove = function(e) {
-	// light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
-	// light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
-	light.x = e.layerX;
-	light.y = e.layerY;
-}
 
+
+window.onresize = resize;
+
+cursor.onmousemove = function(e) {
+	lightNewPos.x =  e.x;
+	lightNewPos.y = e.y;
+}
 
 function collisionDetection(b){
 	for (var i = boxes.length - 1; i >= 0; i--) {

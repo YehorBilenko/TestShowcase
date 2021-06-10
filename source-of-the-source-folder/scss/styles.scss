@@ -107,7 +107,7 @@ body{
   
     @media (orientation: portrait) {
       align-content: flex-start;
-      min-height: 50vh;
+      min-height: 70vh;
     }
   
     /*--------------------*//*--------------------*//*--------------------*/
@@ -373,7 +373,7 @@ body{
       display: flex;
       align-items: center;
       flex-direction: column;
-      min-height: 70vh;
+      min-height: 100vh;
       #canvas{
         position:absolute;
         z-index: 1;
@@ -398,7 +398,9 @@ body{
           display: flex;
           align-items: center;
           flex-direction: column;
+          
           svg{
+            fill: #2C2B2B;
             z-index: 10;
             height: 30vh;
             width: 30vw;
@@ -407,6 +409,44 @@ body{
               width: 80vw;
               height: 20vh;
             }
+          }
+        }
+      }
+      .screen{
+        z-index: 10;
+        display: flex;
+        align-items: center;
+      
+        flex-direction: column;
+        min-height: 60vh;
+      
+        @media (orientation: portrait) {
+          align-content: flex-start;
+          min-height: 70vh;
+        }
+        p{
+          padding-top: 10vh;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          font-size: 800%;
+          font-weight: 400;
+          color: #2C2B2B;
+
+        }
+        a{
+
+          color:#2C2B2B;
+          text-decoration: none;
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 1px;
+          transition: background-size .3s;
+          transition: .3s;
+        
+          &:hover{
+            color: #2C2B2B;
+            background-size: 100% 2px; 
           }
         }
       }
@@ -421,8 +461,7 @@ body{
         align-items: center;
     
         a{
-
-          color: white;
+          color:#2C2B2B;
           text-decoration: none;
           background-image: linear-gradient(currentColor, currentColor);
           background-position: 0% 100%;
@@ -432,12 +471,12 @@ body{
           transition: .3s;
         
           &:hover{
-            color: white;
+            color: #2C2B2B;
             background-size: 100% 2px; 
           }
         }
         h5{
-          color: white;
+          color: #2C2B2B;
           z-index: 10;
           margin: 0;
           padding-right: 100px;
@@ -450,7 +489,7 @@ body{
           }
         }
         h3{
-          color: white;
+          color: #2C2B2B;
           z-index: 10;
           margin: 0;
           padding-right: 100px;
