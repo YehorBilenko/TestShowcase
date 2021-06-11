@@ -26,7 +26,6 @@ $iconbackhover: rgb(0, 0, 0) !global;
 /*--------------------*//*--------------------*//*--------------------*/
 $borderradius: 12px;
 $btnssize: 80px;
-
 $iconsize:46px;
 $iconsizehover:61px;
 /*--------------------*//*--------------------*//*--------------------*/
@@ -35,6 +34,13 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 0;  
   background: transparent;  
@@ -101,7 +107,7 @@ body{
   
     @media (orientation: portrait) {
       align-content: flex-start;
-      min-height: 50vh;
+      min-height: 70vh;
     }
   
     /*--------------------*//*--------------------*//*--------------------*/
@@ -268,13 +274,8 @@ body{
     }
   }
 }
-
-
 $min-width: 320;
 $max-width: 1200;
-
-
-
 html {
   @include rt(14, 18);
   line-height: 1.5;
@@ -295,9 +296,6 @@ html {
     }
   }
 }
-
-
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin: 0;
@@ -356,6 +354,158 @@ small {
   
     &:hover{
       background-size: 100% 2px; 
+    }
+  }
+}
+
+body{
+  .page404  {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  
+    .wrapper{
+      z-index: 2;
+      background-color: rgba(240, 255, 255, 0);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      #canvas{
+        position:absolute;
+        z-index: 1;
+        background-color: #2C2B2B;
+        width: 100vw;
+        height: 100vh;		
+      }
+      .header{
+
+        display: flex;
+        justify-content: center;
+        /*--------------------*//*--------------------*//*--------------------*/
+        min-height: 30vh;
+        min-width: 100vw;
+        @media (orientation: portrait) {
+          min-height: 10vh;
+        }
+        /*--------------------*//*--------------------*//*--------------------*/
+      
+        .logo{
+
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          
+          svg{
+            fill: #EDF1F5;
+            z-index: 10;
+            height: 30vh;
+            width: 30vw;
+            @media (orientation: portrait) {
+              padding-top:5vh;
+              width: 80vw;
+              height: 20vh;
+            }
+          }
+        }
+      }
+      .screen{
+        
+        z-index: 10;
+        display: flex;
+        align-items: center;
+      
+        flex-direction: column;
+        min-height: 60vh;
+      
+        @media (orientation: portrait) {
+          align-content: flex-start;
+          min-height: 70vh;
+        }
+        p{
+          padding-top: 10vh;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          font-size: 1100%;
+          font-weight: 400;
+          color: #EDF1F5;
+        }
+        h3{
+          color:#EDF1F5;
+        }
+        a{
+          color:#EDF1F5;
+          text-decoration: none;
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 1px;
+          transition: background-size .3s;
+          transition: .3s;
+        
+          &:hover{
+            color: #EDF1F5;
+            background-size: 100% 2px; 
+          }
+        }
+      }
+      .footer {
+        display: flex;
+        /*--------------------*//*--------------------*//*--------------------*/
+        min-height: 10vh;
+        min-width: 100vw;
+        /*--------------------*//*--------------------*//*--------------------*/
+        background-color: rgba(0, 0, 0, 0);
+        justify-content: center;
+        align-items: center;
+    
+        a{
+          color:#EDF1F5;
+          text-decoration: none;
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 1px;
+          transition: background-size .3s;
+          transition: .3s;
+        
+          &:hover{
+            color: #EDF1F5;
+            background-size: 100% 2px; 
+          }
+        }
+        h5{
+          color: #EDF1F5;
+          z-index: 10;
+          margin: 0;
+          padding-right: 100px;
+          padding-left: 100px;
+          padding-bottom: 35px;
+          @media (orientation: portrait) {
+            padding: 5;
+            padding-right: 25px;
+            padding-left: 25px;
+          }
+        }
+        h3{
+          color: #EDF1F5;
+          z-index: 10;
+          margin: 0;
+          padding-right: 100px;
+          padding-left: 100px;
+          font-size: 18px;
+          padding-bottom: 35px;
+          @media (orientation: portrait) {
+            padding: 5;
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-bottom: 35px;
+          }
+        }
+      }
     }
   }
 }
