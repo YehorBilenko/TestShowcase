@@ -13,31 +13,23 @@ var h = window.innerHeight;
 var light = {
 	x: w/2,
 	y: h/2
-}//точка появления лампочки при загрузек страници 
+}
 
 console.log(w)
-var colors = ["#2C2B2B", "#FFBFE2", "#EDF1F5"]; //масив с цветами 
-//цвет летающей хуйни 
+var colors = ["#2C2B2B", "#FFBFE2", "#EDF1F5"];
 
 function drawLight() {
 	ctx.beginPath();
 
-    // хрень для рисования света вокруг курсора на мєто не нужно 
-    ctx.arc(light.x, light.y, 700, 0, 2 * Math.PI); //первое значение это радиус градиента вокруг второе значение хуй пойми что как и
+
+    ctx.arc(light.x, light.y, 550, 0, 2 * Math.PI);
 	var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
-	gradient.addColorStop(0, "#FFBF27"); //градиент цвет центра 
-	gradient.addColorStop(1, "#2C2B2B"); //градиент цвет внешний
+	gradient.addColorStop(0, "#FFBF27"); 
+	gradient.addColorStop(1, "#FFBF27"); 
 	ctx.fillStyle = gradient;
 	ctx.fill();
     
-    // хрень для рисования "лампочки" в центре нам єто не нодо
-	//ctx.beginPath();
-	//ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
-	//gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
-	//gradient.addColorStop(0, "#00FFFF"); //цвет курсора лампочки ппрямо под курсором 
-	//gradient.addColorStop(1, "#D61C89"); //цвет курсора внешний вокруг курсора 
-	//ctx.fillStyle = gradient;
-	//ctx.fill();
+
 }
 
 function Box() {
@@ -48,15 +40,15 @@ function Box() {
 	this.y = Math.floor((Math.random() * c.height) + 1);
 	this.r = Math.random() * Math.PI;
 
-	this.shadow_length = 2000; //размер тени что логично 
+	this.shadow_length = 2000; 
 
 	this.points = Math.floor((Math.random() * 6) + 5);
 
-	//this.color = colors[Math.floor((Math.random() * colors.length))]; рандомные цвета хуйни 
-    this.color = colors[2]; //определенній цвет 
+	
+    this.color = colors[2]; 
 	this.getDots = function() {
 
-		var full = (Math.PI * 4) / this.points;// от изменения значения менятся форма хуйни  
+		var full = (Math.PI * 4) / this.points;
 
 		var points = [];
 
@@ -72,12 +64,10 @@ function Box() {
 	}
 	this.rotate = function() {
         
-		var speed = (30 - this.half_size) / 20; // скорость летающей хуйни // от числа в начале отнимаем половину размера хуйни а потом делим на число, 
-        //в зависмости от -/+ получаемого числа меняется напрвление   
-
-		this.r += speed * 0.002; //скорость вращения 
+		var speed = (30 - this.half_size) / 20; 
+		this.r += speed * 0.002; 
         
-		this.x += speed; //направление движения 
+		this.x += speed;
 		this.y += speed;
 	}
 	this.draw = function() {
@@ -125,19 +115,19 @@ function Box() {
 			ctx.lineTo(points[n].startX, points[n].startY);
 			ctx.lineTo(points[n].endX, points[n].endY);
 			ctx.lineTo(points[i].endX, points[i].endY);
-			ctx.fillStyle = "#2C2B2B"; //цвет тени 
+			ctx.fillStyle = "#2C2B2B";
 			ctx.fill();
 		};
 	}
 }
 
 var boxes = [];
-var lightPositionLerp = 2 //чем больше значение тем выше плвная скорость перемещения курсора 
+var lightPositionLerp = 2 
 var lastTime = Date.now();
 var lightNewPos = {
 	x: w/2,
 	y: h/2
-}//точка появления лампочки при загрузек страници 
+}
 
 function lerp(start, end, t) {
 	t = Math.min(t, 1) 
@@ -170,8 +160,6 @@ draw();
 while (boxes.length < 14) {
 	boxes.push(new Box());
 }
-
-
 
 window.onresize = resize;
 
