@@ -15,7 +15,6 @@ var light = {
 	y: h/2
 }
 
-console.log(w)
 var colors = ["#2C2B2B", "#FFBFE2", "#EDF1F5"];
 
 function drawLight() {
