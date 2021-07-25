@@ -65,6 +65,7 @@ function Box() {
     this.x += speed;
     this.y += speed;
   }
+
   this.draw = function () {
     var dots = this.getDots();
 
@@ -130,7 +131,6 @@ function lerp(start, end, t) {
 }
 
 function draw() {
-
   var dt = (Date.now() - lastTime) / 1000
   lastTime = Date.now()
   light.x = lerp(light.x, lightNewPos.x, dt * lightPositionLerp)
