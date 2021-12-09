@@ -159,7 +159,7 @@ body {
 @media (orientation:portrait) {
     .wrapper .screen {
         align-content: flex-start;
-        min-height: 50vh
+        min-height: 56vh
     }
 }
 
