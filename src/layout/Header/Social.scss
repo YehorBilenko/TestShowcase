@@ -1,0 +1,30 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.social {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        width: 47px;
+        height: 47px;
+        background-color: $black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 14px;
+
+        .icon {
+            width: 45%;
+
+            @media (min-width: $desktopS) {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: $desktopS) {
+            width: 52px;
+            height: 52px;
+        }
+    }
+}

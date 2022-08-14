@@ -1,8 +1,39 @@
 @import '_assets/scss/abstractions/variables.scss';
 @import '_assets/scss/base/reset.scss';
+// fonts
+@import '_assets/fonts/jost/Jost.scss';
+@import '_assets/fonts/lato/Lato.scss';
 
 body {
   background-image: url("_assets/images/background.svg");
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Jost";
+  font-size: $normal;
+  background-position-x: 60%;
+
+  @media (min-width: $desktopMiddle) {
+    background-position: initial;
+  }
+}
+
+.container {
+  padding-top: 22px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $mobile) {
+    width: 750px;
+  }
+
+  @media (min-width: $desktopS) {
+    width: 970px;
+  }
+
+  @media (min-width: $desktopMiddle) {
+    width: 1170px;
+  }
 }

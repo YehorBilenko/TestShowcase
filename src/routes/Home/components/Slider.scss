@@ -1,0 +1,31 @@
+.carousel.carousel-slider {
+    // padding: 80px 0;
+
+    .carousel-status {
+        display: none;
+    }
+
+    .control-arrow {
+        margin: auto !important;
+
+        &:hover {
+            background: transparent !important;
+        }
+    }
+
+    .control-next {
+        right: 30px !important;
+    }
+
+    .control-prev {
+        left: 30px !important;
+    }
+
+    .control-dots .dot {
+        width: 25px;
+        height: 8px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: none;
+    }
+}

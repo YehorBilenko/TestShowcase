@@ -1,0 +1,41 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.slide-item {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    text-align: start !important;
+    width: 60vw;
+    justify-content: space-between;
+
+    .left-info {
+        .title {
+            font-family: 'Lato';
+            font-size: $biggest;
+            color: $black;
+        }
+
+        .sub-title {
+            font-size: $big;
+        }
+
+        .store-buttons {
+            display: flex;
+
+            .li:nth-child(1) {
+                margin-right: 20px;
+            }
+        }
+
+        &>* {
+            padding: 20px 0;
+        }
+    }
+}
+
+li.slide {
+    display: flex;
+    justify-content: center;
+    flex-flow: inherit !important;
+    padding: 70px 0;
+}
