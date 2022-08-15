@@ -1,0 +1,66 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.policy {
+    &_wrapper {
+        border: 2px solid $black;
+        margin: 2rem;
+        padding: 2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &_wrapper a {
+        color: $white
+    }
+
+    &_wrapper a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s;
+        transition: 0.3s;
+        width: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &_wrapper a:hover {
+        background-size: 100% 2px
+    }
+
+    .list {
+        font-size: 20px;
+        line-height: 1.55
+    }
+
+    .list ul {
+        padding: 20px
+    }
+
+    .list ul li {
+        list-style: disc;
+        line-height: 1.55
+    }
+
+    .list ul li li {
+        padding: 0px;
+        list-style: circle
+    }
+
+
+    p {
+        margin: 0;
+        font-size: $normal;
+        line-height: 1.4
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 1.5rem
+    }
+
+    h2 {
+        font-size: $big;
+    }
+}

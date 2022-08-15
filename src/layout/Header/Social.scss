@@ -42,9 +42,24 @@
         justify-content: center;
         align-items: center;
         margin: 14px;
+        cursor: pointer;
+
+        &:hover {
+            .icon {
+                transform: scale(1.2);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .icon {
+                opacity: .8;
+            }
+        }
 
         .icon {
             width: 45%;
+            transition: transform ease 0.2s, opacity ease 0.2s;
 
             @media (min-width: $desktopS) {
                 width: 100%;

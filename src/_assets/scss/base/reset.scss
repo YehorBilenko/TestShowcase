@@ -209,6 +209,11 @@ html {
     /* 2 */
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */

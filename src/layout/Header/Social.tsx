@@ -11,25 +11,57 @@ const Social: React.FC = () => (
   <ul className="social">
     <li className="li social-group">
       <div className="social__item">
-        <AndroidIcon className="icon" />
+        <a
+          href="https://play.google.com/store/apps/dev?id=7917772865134124209"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AndroidIcon className="icon" />
+        </a>
       </div>
       <div className="social__item">
-        <AppleIcon className="icon" />
+        <a
+          href="https://apps.apple.com/us/developer/yehor-bilenko/id1513825133"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AppleIcon className="icon" />
+        </a>
       </div>
     </li>
     <li className="li line" />
     <li className="li social-group">
       <div className="social__item">
-        <EmailIcon className="icon" />
+        <a href="mailto:support@lightdev.io" rel="noreferrer">
+          <EmailIcon className="icon" />
+        </a>
       </div>
       <div className="social__item">
-        <LinkedinIcon className="icon" />
+        <a
+          href="https://www.linkedin.com/company/lightdev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedinIcon className="icon" />
+        </a>
       </div>
       <div className="social__item">
-        <TiktokIcon className="icon" />
+        <a
+          href="https://www.tiktok.com/@lightdev_games"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <TiktokIcon className="icon" />
+        </a>
       </div>
       <div className="social__item">
-        <UnityIcon className="icon" />
+        <a
+          href="https://assetstore.unity.com/publishers/31610"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <UnityIcon className="icon" />
+        </a>
       </div>
     </li>
   </ul>
