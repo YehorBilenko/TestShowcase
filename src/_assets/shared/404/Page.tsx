@@ -2,19 +2,14 @@ import './Page.scss';
 import * as React from 'react';
 import { home } from 'routes/variables';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as Burger404Img } from '_assets/images/burger-404.svg';
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
   const onClick = (): void => navigate(home);
   return (
-    <div className="error-page">
-      <div className="error-page-head">{'404'}</div>
-      <div className="error-page-title">
-        <p>{'Sorry! Page not found'}</p>
-      </div>
-      <button className="error-page-btn" onClick={onClick}>
-        {'Back to home'}
-      </button>
+    <div className="not-found">
+      <Burger404Img className="svg" />
     </div>
   );
 };
