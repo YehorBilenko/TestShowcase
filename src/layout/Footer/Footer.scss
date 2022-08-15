@@ -1,15 +1,40 @@
+@import '_assets/scss/abstractions/variables.scss';
+
 .footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
+    .more-links {
+        display: block;
+        text-transform: uppercase;
+        font-size: $normal;
+        text-align: center;
 
-    .copyright {
-        display: flex;
-        align-items: center;
+        @media (min-width: $desktopS) {
+            font-size: calc($big / 1.5);
+        }
 
-        .p {
-            margin-left: 5px;
+        @media (min-width: $desktopMiddle) {
+            display: none;
+        }
+
+        @media (min-width: $desktop) {
+            font-size: $big;
         }
     }
+
+    .sub-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+
+        .copyright {
+            display: flex;
+            align-items: center;
+
+            .p {
+                margin-left: 5px;
+            }
+        }
+    }
+
+
 }

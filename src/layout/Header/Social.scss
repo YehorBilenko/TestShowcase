@@ -3,6 +3,35 @@
 .social {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: $mobileS) {
+        flex-direction: row;
+    }
+
+    .li.social-group {
+        display: flex;
+        max-width: 150px;
+        flex-wrap: wrap;
+
+        @media (min-width: $mobileS) {
+            max-width: 100%;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .li.line {
+        display: none;
+        height: 50px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+
+        @media (min-width: $mobileS) {
+            display: block;
+        }
+    }
 
     &__item {
         width: 47px;

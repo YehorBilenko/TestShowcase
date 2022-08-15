@@ -9,23 +9,28 @@ import { ReactComponent as LinkedinIcon } from '_assets/images/icons/linkedin.sv
 
 const Social: React.FC = () => (
   <ul className="social">
-    <li className="social__item">
-      <AndroidIcon className="icon" />
+    <li className="li social-group">
+      <div className="social__item">
+        <AndroidIcon className="icon" />
+      </div>
+      <div className="social__item">
+        <AppleIcon className="icon" />
+      </div>
     </li>
-    <li className="social__item">
-      <AppleIcon className="icon" />
-    </li>
-    <li className="social__item">
-      <EmailIcon className="icon" />
-    </li>
-    <li className="social__item">
-      <LinkedinIcon className="icon" />
-    </li>
-    <li className="social__item">
-      <TiktokIcon className="icon" />
-    </li>
-    <li className="social__item">
-      <UnityIcon className="icon" />
+    <li className="li line" />
+    <li className="li social-group">
+      <div className="social__item">
+        <EmailIcon className="icon" />
+      </div>
+      <div className="social__item">
+        <LinkedinIcon className="icon" />
+      </div>
+      <div className="social__item">
+        <TiktokIcon className="icon" />
+      </div>
+      <div className="social__item">
+        <UnityIcon className="icon" />
+      </div>
     </li>
   </ul>
 );

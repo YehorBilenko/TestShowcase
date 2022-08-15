@@ -1,24 +1,46 @@
-.carousel.carousel-slider {
-    // padding: 80px 0;
+@import '_assets/scss/abstractions/variables.scss';
 
+.carousel.carousel-slider {
     .carousel-status {
         display: none;
     }
 
-    .control-arrow {
-        margin: auto !important;
+    .control-arrow.control-next,
+    .control-arrow.control-prev {
+        margin: auto;
+        padding: 10px;
+        top: 20%;
+        opacity: 1;
+
+        @media (min-width: $mobile) {
+            padding: 5px;
+            top: 0;
+        }
 
         &:hover {
-            background: transparent !important;
+            background: transparent;
+        }
+
+        &:active,
+        &:focus {
+            opacity: .4;
         }
     }
 
-    .control-next {
-        right: 30px !important;
+    .control-arrow.control-next {
+        right: 5px;
+
+        @media (min-width: $mobile) {
+            right: 30px;
+        }
     }
 
-    .control-prev {
-        left: 30px !important;
+    .control-arrow.control-prev {
+        left: 5px;
+
+        @media (min-width: $mobile) {
+            left: 30px;
+        }
     }
 
     .control-dots .dot {

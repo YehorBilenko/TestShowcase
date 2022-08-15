@@ -6,16 +6,41 @@
 
 body {
   background-image: url("_assets/images/background.svg");
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Jost";
   font-size: $normal;
   background-position-x: 60%;
 
+
+}
+
+body,
+#root {
+
+  @media (orientation: portrait) and (min-height: 850px) {
+    height: 100vh;
+  }
+
+  @media (orientation: landscape) and (min-width: 768px) {
+    height: 100%;
+  }
+
+  @media (orientation: landscape) and (min-width: 1919px) {
+    height: 100vh;
+  }
+
+
   @media (min-width: $desktopMiddle) {
     background-position: initial;
   }
+
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {

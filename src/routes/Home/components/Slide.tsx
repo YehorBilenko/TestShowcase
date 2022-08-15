@@ -2,6 +2,7 @@ import './Slide.scss';
 import React from 'react';
 import { PreviewPhones } from './PreviewPhones';
 import { ReactComponent as AppstoreButtonIcon } from '_assets/images/appstore.svg';
+import { ReactComponent as GooglestoreButtonIcon } from '_assets/images/googlestore.svg';
 
 export const Slide: React.FC = () => {
   return (
@@ -11,10 +12,10 @@ export const Slide: React.FC = () => {
         <p className="sub-title">17m+ DOWNLOADS</p>
         <ul className="store-buttons">
           <li className="li">
-            <AppstoreButtonIcon />
+            <GooglestoreButtonIcon className="svg" />
           </li>
           <li className="li">
-            <AppstoreButtonIcon />
+            <AppstoreButtonIcon className="svg" />
           </li>
         </ul>
       </div>
