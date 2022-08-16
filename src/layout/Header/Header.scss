@@ -1,0 +1,35 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $desktopMiddle) {
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &__img {
+            width: 230px;
+
+            @media (min-width: $mobileS) {
+                width: 330px;
+            }
+        }
+    }
+
+    .social {
+        display: none;
+        font-size: $big;
+
+
+        @media (min-width: $desktopMiddle) {
+            display: flex;
+        }
+    }
+}

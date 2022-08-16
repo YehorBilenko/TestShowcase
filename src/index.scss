@@ -1,0 +1,54 @@
+@import '_assets/scss/abstractions/variables.scss';
+@import '_assets/scss/abstractions/mixins.scss';
+@import '_assets/scss/base/reset.scss';
+// fonts
+@import '_assets/fonts/jost/Jost.scss';
+@import '_assets/fonts/lato/Lato.scss';
+
+body {
+  background-image: url("_assets/images/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Jost";
+  font-size: $normal;
+  background-position-x: 60%;
+
+
+}
+
+body,
+#root {
+  min-height: 100vh;
+  height: 100%;
+
+  @media (min-width: $desktopMiddle) {
+    background-position: initial;
+  }
+
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  padding-top: 22px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $mobile) {
+    width: 750px;
+  }
+
+  @media (min-width: $desktopS) {
+    width: 970px;
+  }
+
+  @media (min-width: $desktopMiddle) {
+    width: 1170px;
+  }
+}

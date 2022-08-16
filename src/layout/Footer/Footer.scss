@@ -1,0 +1,47 @@
+@import '_assets/scss/abstractions/variables.scss';
+@import '_assets/scss/abstractions/mixins.scss';
+
+.footer {
+    .more-links {
+        display: block;
+        text-transform: uppercase;
+        font-size: $normal;
+        text-align: center;
+
+        @media (min-width: $desktopS) {
+            font-size: calc($big / 1.5);
+        }
+
+        @media (min-width: $desktopMiddle) {
+            display: none;
+        }
+
+        @media (min-width: $desktop) {
+            font-size: $big;
+        }
+    }
+
+    .sub-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+
+        .copyright {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+            .p {
+                margin-left: 5px;
+            }
+        }
+
+        .policy-navlink {
+            @include linkUnderline;
+            width: fit-content;
+        }
+    }
+
+
+}

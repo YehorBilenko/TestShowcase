@@ -1,0 +1,66 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: $mobileS) {
+        flex-direction: row;
+    }
+
+    .li.social-group {
+        display: flex;
+        max-width: 160px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: $mobileS) {
+            max-width: 100%;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        width: 50px;
+        height: 50px;
+        background-color: $black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+            .icon {
+                transform: scale(1.2);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .icon {
+                opacity: .8;
+            }
+        }
+
+        .a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                width: 100%;
+                transition: transform ease 0.2s, opacity ease 0.2s;
+            }
+        }
+
+        @media (min-width: $desktopS) {
+            width: 52px;
+            height: 52px;
+        }
+    }
+}

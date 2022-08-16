@@ -1,0 +1,102 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.slide-item {
+    display: flex;
+    flex-direction: column-reverse !important;
+    align-items: center;
+    text-align: center !important;
+    justify-content: space-between;
+    max-width: 1170px;
+    transform: scale(.8);
+
+    @media (min-width: $mobile) {
+        width: 90vw;
+    }
+
+    @media (min-width: $desktopS) {
+        width: 70vw;
+        text-align: start !important;
+        flex-direction: row !important;
+    }
+
+    @media (min-width: 1630px) {
+        width: 60vw;
+    }
+
+    .left-info {
+        .title {
+            font-family: 'Lato';
+            font-size: $big;
+            color: $black;
+
+            @media (min-width: $desktopS) {
+                font-size: calc($biggest / 1.5);
+            }
+
+            @media (min-width: $desktop) {
+                font-size: $biggest;
+            }
+        }
+
+        .sub-title {
+            font-size: $normal;
+
+            @media (min-width: $desktopS) {
+                font-size: calc($big / 1.5);
+            }
+
+            @media (min-width: $desktop) {
+                font-size: $big;
+            }
+        }
+
+        .store-buttons {
+            display: flex;
+
+            .li:nth-child(1) {
+                margin-right: 20px;
+            }
+        }
+
+        &>* {
+            padding: 10px 0;
+
+            @media (min-width: $mobile) {
+                padding: 20px 0;
+            }
+
+            .svg {
+                width: 100%;
+                min-width: 120px;
+
+                @media (min-width: $mobile) {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .right-info {
+        margin: -155px 0;
+
+        @media (min-width: $mobile) {
+            margin: -130px 0;
+        }
+
+        @media (min-width: $desktopS) {
+            margin: 0;
+        }
+
+    }
+}
+
+li.slide {
+    display: flex;
+    justify-content: center;
+    flex-flow: inherit !important;
+    padding-bottom: 30px;
+
+    @media (min-width: $desktopMiddle) {
+        padding: 70px 0;
+    }
+}
