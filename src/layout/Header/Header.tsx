@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <img src={logoImg} alt="Logo" className="logo__img" />
       </div>
       <div className="social">
-        <p className="p">More our games</p>
+        <p className="p">More about us</p>
         <Social />
       </div>
     </header>

@@ -1,4 +1,5 @@
 @import '_assets/scss/abstractions/variables.scss';
+@import '_assets/scss/abstractions/mixins.scss';
 
 .footer {
     .more-links {
@@ -34,6 +35,11 @@
             .p {
                 margin-left: 5px;
             }
+        }
+
+        .policy-navlink {
+            @include linkUnderline;
+            width: fit-content;
         }
     }
 

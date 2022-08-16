@@ -13,8 +13,9 @@
 
     .li.social-group {
         display: flex;
-        max-width: 150px;
+        max-width: 160px;
         flex-wrap: wrap;
+        justify-content: center;
 
         @media (min-width: $mobileS) {
             max-width: 100%;
@@ -22,26 +23,15 @@
         }
     }
 
-    .li.line {
-        display: none;
-        height: 50px;
-        border: 1px solid #000000;
-        border-radius: 10px;
-
-        @media (min-width: $mobileS) {
-            display: block;
-        }
-    }
-
     &__item {
-        width: 47px;
-        height: 47px;
+        width: 50px;
+        height: 50px;
         background-color: $black;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 14px;
+        margin: 10px;
         cursor: pointer;
 
         &:hover {
@@ -57,12 +47,14 @@
             }
         }
 
-        .icon {
-            width: 45%;
-            transition: transform ease 0.2s, opacity ease 0.2s;
+        .a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            @media (min-width: $desktopS) {
+            .icon {
                 width: 100%;
+                transition: transform ease 0.2s, opacity ease 0.2s;
             }
         }
 

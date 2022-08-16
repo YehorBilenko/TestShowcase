@@ -12,6 +12,7 @@ const Social: React.FC = () => (
     <li className="li social-group">
       <div className="social__item">
         <a
+          className="a"
           href="https://play.google.com/store/apps/dev?id=7917772865134124209"
           target="_blank"
           rel="noreferrer"
@@ -21,6 +22,7 @@ const Social: React.FC = () => (
       </div>
       <div className="social__item">
         <a
+          className="a"
           href="https://apps.apple.com/us/developer/yehor-bilenko/id1513825133"
           target="_blank"
           rel="noreferrer"
@@ -29,24 +31,20 @@ const Social: React.FC = () => (
         </a>
       </div>
     </li>
-    <li className="li line" />
     <li className="li social-group">
       <div className="social__item">
-        <a href="mailto:support@lightdev.io" rel="noreferrer">
-          <EmailIcon className="icon" />
-        </a>
-      </div>
-      <div className="social__item">
         <a
-          href="https://www.linkedin.com/company/lightdev"
+          className="a"
+          href="https://assetstore.unity.com/publishers/31610"
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedinIcon className="icon" />
+          <UnityIcon className="icon" />
         </a>
       </div>
       <div className="social__item">
         <a
+          className="a"
           href="https://www.tiktok.com/@lightdev_games"
           target="_blank"
           rel="noreferrer"
@@ -56,11 +54,17 @@ const Social: React.FC = () => (
       </div>
       <div className="social__item">
         <a
-          href="https://assetstore.unity.com/publishers/31610"
+          className="a"
+          href="https://www.linkedin.com/company/lightdev"
           target="_blank"
           rel="noreferrer"
         >
-          <UnityIcon className="icon" />
+          <LinkedinIcon className="icon" />
+        </a>
+      </div>
+      <div className="social__item">
+        <a className="a" href="mailto:support@lightdev.io" rel="noreferrer">
+          <EmailIcon className="icon" />
         </a>
       </div>
     </li>

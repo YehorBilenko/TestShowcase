@@ -1,4 +1,5 @@
 @import '_assets/scss/abstractions/variables.scss';
+@import '_assets/scss/abstractions/mixins.scss';
 
 .policy {
     &_wrapper {
@@ -14,21 +15,9 @@
     }
 
     &_wrapper a {
-        text-decoration: none;
-        background-image: linear-gradient(currentColor, currentColor);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size 0.3s;
-        transition: 0.3s;
-        width: 30px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include linkUnderline;
     }
 
-    &_wrapper a:hover {
-        background-size: 100% 2px
-    }
 
     .list {
         font-size: 20px;

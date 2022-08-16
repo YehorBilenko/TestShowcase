@@ -6,6 +6,8 @@
     align-items: center;
     text-align: center !important;
     justify-content: space-between;
+    max-width: 1170px;
+    transform: scale(.8);
 
     @media (min-width: $mobile) {
         width: 90vw;
