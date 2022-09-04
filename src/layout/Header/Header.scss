@@ -3,6 +3,10 @@
 .header {
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media (min-width: $desktopMiddle) {
         justify-content: space-between;
@@ -11,6 +15,7 @@
     &.container-mobile {
         justify-content: flex-start;
         margin: 2rem 2rem 0;
+        width: 100%;
     }
 
     .logo {

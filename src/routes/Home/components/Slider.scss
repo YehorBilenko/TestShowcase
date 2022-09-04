@@ -47,7 +47,11 @@
         bottom: 0;
 
         @media (min-width: $desktopS) {
-            bottom: 5%;
+            bottom: 10%;
+        }
+
+        @media(min-width: $desktop) {
+            bottom: 5%
         }
 
         .dot {

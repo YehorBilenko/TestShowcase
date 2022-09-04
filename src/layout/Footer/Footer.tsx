@@ -11,10 +11,12 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer container">
-      <div className="more-links">
-        <p className="p">More about us</p>
-        <Social />
-      </div>
+      {isHome && (
+        <div className="more-links">
+          <p className="p">More about us</p>
+          <Social />
+        </div>
+      )}
       <div className="sub-info">
         <div className="copyright">
           <CopyrightIcon />
