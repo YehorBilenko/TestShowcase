@@ -43,11 +43,19 @@
         }
     }
 
-    .control-dots .dot {
-        width: 25px;
-        height: 8px;
-        background-color: #FFFFFF;
-        border-radius: 4px;
-        box-shadow: none;
+    .control-dots {
+        bottom: 0;
+
+        @media (min-width: $desktopS) {
+            bottom: 5%;
+        }
+
+        .dot {
+            width: 25px;
+            height: 8px;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            box-shadow: none;
+        }
     }
 }

@@ -45,10 +45,10 @@ body,
   }
 
   @media (min-width: $desktopS) {
-    width: 970px;
+    width: calc(970px / 1.2);
   }
 
   @media (min-width: $desktopMiddle) {
-    width: 1170px;
+    width: calc(1170px / 1.1);
   }
 }

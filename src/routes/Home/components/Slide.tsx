@@ -19,12 +19,12 @@ export const Slide: React.FC<ISlide> = ({
         <p className="sub-title">{subTitle}</p>
         <ul className="store-buttons">
           <li className="li">
-            <a href={googleStoreLink}>
+            <a href={googleStoreLink} target="_blank" rel="noreferrer">
               <GooglestoreButtonIcon className="svg" />
             </a>
           </li>
           <li className="li">
-            <a href={appStoreLink}>
+            <a href={appStoreLink} target="_blank" rel="noreferrer">
               <AppstoreButtonIcon className="svg" />
             </a>
           </li>

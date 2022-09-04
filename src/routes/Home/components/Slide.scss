@@ -7,23 +7,16 @@
     text-align: center !important;
     justify-content: space-between;
     max-width: 1170px;
-    transform: scale(.8);
-
-    @media (min-width: $mobile) {
-        width: 90vw;
-    }
 
     @media (min-width: $desktopS) {
-        width: 70vw;
         text-align: start !important;
         flex-direction: row !important;
     }
 
-    @media (min-width: 1630px) {
-        width: 60vw;
-    }
-
     .left-info {
+        position: relative;
+        z-index: 1;
+
         .title {
             font-family: 'Lato';
             font-size: $big;
@@ -34,7 +27,7 @@
             }
 
             @media (min-width: $desktop) {
-                font-size: $biggest;
+                font-size: calc($biggest/1.2);
             }
         }
 
@@ -61,7 +54,11 @@
         &>* {
             padding: 10px 0;
 
-            @media (min-width: $mobile) {
+            @media (min-width: $desktopS) {
+                padding: 15px 0;
+            }
+
+            @media (min-width: $desktop) {
                 padding: 20px 0;
             }
 
