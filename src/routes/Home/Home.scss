@@ -1,0 +1,50 @@
+@import '_assets/scss/abstractions/variables.scss';
+
+.home {
+    position: relative;
+    height: 80vh;
+
+    .content {
+        position: absolute;
+        transform: translateY(-50%);
+        width: 100%;
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+        transition: top 1s ease, opacity 1s cubic-bezier(0.95, 0.12, 0, 0.85), visibility 1s cubic-bezier(0.95, 0.12, 0, 0.85);
+
+        &.active {
+            top: -35%;
+            opacity: 0;
+            visibility: hidden;
+            transition: top 1s ease, opacity 0.4s cubic-bezier(0.4, 0, 0, 1), visibility 1s cubic-bezier(0.95, 0.12, 0, 0.85);
+
+            @media (min-width: $mobile) {
+                top: 50%;
+                opacity: 1;
+                visibility: visible;
+            }
+
+        }
+    }
+
+    .sub-content {
+        @media(min-width: $mobile) {
+            display: none;
+        }
+    }
+
+    .toggle-handler {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        left: 50%;
+        bottom: -8vh;
+        transform: translateX(-50%);
+        
+        @media (min-width: $mobile) {
+            display: none;
+        }
+    }
+}

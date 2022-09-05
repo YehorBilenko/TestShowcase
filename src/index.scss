@@ -21,6 +21,7 @@ body,
   min-height: 100vh;
   height: 100%;
   overflow: hidden;
+  touch-action: auto;
 
   @media (min-width: $desktopMiddle) {
     background-position: initial;
@@ -31,7 +32,7 @@ body,
 #root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .container {

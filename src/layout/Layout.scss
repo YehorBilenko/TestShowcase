@@ -1,1 +1,9 @@
 @import '_assets/scss/abstractions/variables.scss';
+
+.layout {
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}

@@ -2,28 +2,14 @@
 @import '_assets/scss/abstractions/mixins.scss';
 
 .footer {
-    .more-links {
-        display: block;
-        text-transform: uppercase;
-        font-size: $normal;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        margin-bottom: 80px;
-
-        @media (min-width: $desktopS) {
-            font-size: calc($big / 1.5);
-        }
-
-        @media (min-width: $desktopMiddle) {
-            display: none;
+    .links {
+        display: none;
+        @media (min-width: $mobile) {
+            display: block;
         }
 
         @media (min-width: $desktop) {
-            font-size: $big;
+            display: none;
         }
     }
 

@@ -2,7 +2,12 @@
 @import '_assets/scss/abstractions/mixins.scss';
 
 .policy {
-    margin-top: 80px;
+    margin-top: 65px;
+
+    @media (min-width: $mobileS) {
+        margin-top: 80px;
+    }
+
     &_wrapper {
         border: 2px solid $black;
         margin: 2rem;
@@ -10,7 +15,15 @@
         overflow: hidden;
         text-overflow: ellipsis;
         overflow-y: scroll;
-        height: calc(100vh - 290px);
+        height: 60vh;
+
+        @media (min-width: $mobileS) {
+            height: 60vh;
+        }
+
+        @media (min-width: $desktop) {
+            height: calc(100vh - 290px);
+        }
     }
 
     &_wrapper a {

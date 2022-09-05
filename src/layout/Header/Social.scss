@@ -7,19 +7,27 @@
     justify-content: center;
     flex-direction: column;
 
-    @media (min-width: $mobileS) {
+    @media (min-width: $mobile) {
         flex-direction: row;
     }
 
     .li.social-group {
-        display: flex;
         max-width: 160px;
         flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 70px 70px;
+        align-content: center;
+        align-items: center;
 
         @media (min-width: $mobileS) {
             max-width: 100%;
             flex-wrap: nowrap;
+        }
+
+        @media (min-width: $mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 

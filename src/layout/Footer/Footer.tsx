@@ -1,20 +1,19 @@
 import './Footer.scss';
 import * as React from 'react';
-import { Social } from '../Header/Social';
+import { AppContext } from 'App';
 import { policy, home } from 'routes/variables';
 import { useLocation, Link } from 'react-router-dom';
+import { MoreLinks } from '_assets/shared/MoreLinks';
 import { ReactComponent as CopyrightIcon } from '_assets/images/icons/copyright.svg';
 
 const Footer: React.FC = () => {
   const location = useLocation();
   const isHome = location.pathname === home;
-
   return (
     <footer className="footer container">
       {isHome && (
-        <div className="more-links">
-          <p className="p">More about us</p>
-          <Social />
+        <div className="links">
+          <MoreLinks />
         </div>
       )}
       <div className="sub-info">

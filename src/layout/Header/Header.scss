@@ -7,6 +7,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 
     @media (min-width: $desktopMiddle) {
         justify-content: space-between;
@@ -36,7 +37,6 @@
     .social {
         display: none;
         font-size: $big;
-
 
         @media (min-width: $desktopMiddle) {
             display: flex;

@@ -8,7 +8,9 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
+      <div className="layout">
       {children}
+      </div>
       <Footer />
     </>
   );
