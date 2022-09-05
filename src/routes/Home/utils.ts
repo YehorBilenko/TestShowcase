@@ -7,11 +7,11 @@ export const games: TGame[] = [
   {
     id: 1,
     title: 'Hooping Heads',
-    subTitle: '17m+ DOWNLOADS',
+    subTitle: '23m+ DOWNLOADS',
     googleStoreLink:
       'https://play.google.com/store/apps/details?id=com.lightdev.hoppingheads',
     appStoreLink:
       'https://apps.apple.com/app/hopping-heads-scream-shout/id1596314588',
     media: [gameImg1, gameImg2, gameImg3],
-  },
+  }
 ];
