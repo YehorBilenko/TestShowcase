@@ -7,8 +7,14 @@ import { MoreLinks } from '_assets/shared/MoreLinks';
 import { ReactComponent as CopyrightIcon } from '_assets/images/icons/copyright.svg';
 
 const Footer: React.FC = () => {
+  const { toggleClicked } = React.useContext(AppContext);
   const location = useLocation();
   const isHome = location.pathname === home;
+  const onNavlinkClick = () => {
+    if(isHome) {
+      toggleClicked(false)
+    }
+  }
   return (
     <footer className="footer container">
       {isHome && (
@@ -21,7 +27,7 @@ const Footer: React.FC = () => {
           <CopyrightIcon />
           <p className="p">LightDev 2022</p>
         </div>
-        <Link className="policy-navlink" to={isHome ? policy : home}>
+        <Link className="policy-navlink" to={isHome ? policy : home} onClick={onNavlinkClick}>
           {isHome ? 'Policy' : 'Home'}
         </Link>
       </div>

@@ -4,12 +4,19 @@
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
     background-repeat: no-repeat;
+    background-size: 100% 2px;
+    width: 30px;
+    text-overflow: ellipsis;
+
+}
+
+@mixin linkUnderlineHover {
+
+    @include linkUnderline;
     background-size: 0% 2px;
     transition: background-size 0.3s;
     transition: 0.3s;
-    width: 30px;
     overflow: hidden;
-    text-overflow: ellipsis;
 
     &:hover {
         background-size: 100% 2px
