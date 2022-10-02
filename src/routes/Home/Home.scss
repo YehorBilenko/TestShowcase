@@ -2,7 +2,16 @@
 
 .home {
     position: relative;
+    margin-top: 190px;
+    margin-bottom: 180px;
+    overflow: hidden;
     height: 80vh;
+
+    @media (min-width: $mobile) {
+        margin-top: 130px;
+        margin-bottom: 190px;
+        height: 65vh;
+    }
 
     .content {
         position: absolute;
