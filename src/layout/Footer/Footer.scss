@@ -40,7 +40,7 @@
         }
 
         .policy-navlink {
-            @include linkUnderline;
+            @include linkUnderlineHover;
             width: max-content;
         }
     }
