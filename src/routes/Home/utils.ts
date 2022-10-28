@@ -1,9 +1,9 @@
-import gameImg1 from '_assets/images/example1.jpg';
-import gameImg2 from '_assets/images/example2.jpg';
-import gameImg3 from '_assets/images/example3.jpg';
 import gameImg4 from '_assets/images/game_1.png';
 import gameImg5 from '_assets/images/game_2.png';
 import gameImg6 from '_assets/images/game_3.png';
+import gameImg1 from '_assets/images/example1.jpg';
+import gameImg2 from '_assets/images/example2.jpg';
+import gameImg3 from '_assets/images/example3.jpg';
 import { TGame } from './interfaces';
 
 export const games: TGame[] = [
