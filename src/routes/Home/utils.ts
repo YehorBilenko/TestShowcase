@@ -25,6 +25,6 @@ export const games: TGame[] = [
       'https://play.google.com/store/apps/dev?id=7917772865134124209',
     appStoreLink:
       'https://apps.apple.com/us/developer/yehor-bilenko/id1513825133',
-    media: [gameImg4, gameImg5, gameImg6],
+    media: [gameImg5, gameImg6, gameImg4],
   }
 ];
