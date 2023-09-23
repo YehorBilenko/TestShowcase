@@ -10,7 +10,7 @@ export const games: TGame[] = [
   {
     id: 1,
     title: 'Hooping Heads',
-    subTitle: '35m+ DOWNLOADS',
+    subTitle: '40m+ DOWNLOADS',
     googleStoreLink:
       'https://play.google.com/store/apps/details?id=com.lightdev.hoppingheads',
     appStoreLink:
