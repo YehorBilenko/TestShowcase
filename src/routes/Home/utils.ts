@@ -4,6 +4,9 @@ import gameImg6 from '_assets/images/game_3.png';
 import gameImg1 from '_assets/images/example1.jpg';
 import gameImg2 from '_assets/images/example2.jpg';
 import gameImg3 from '_assets/images/example3.jpg';
+import gameImg7 from '_assets/images/WS_1.png';
+import gameImg8 from '_assets/images/WS_2.png';
+import gameImg9 from '_assets/images/WS_3.png';
 import { TGame } from './interfaces';
 
 export const games: TGame[] = [
@@ -19,6 +22,16 @@ export const games: TGame[] = [
   },
   {
     id: 2,
+    title: 'Weapon Survivor',
+    subTitle: '1m+ DOWNLOADS',
+    googleStoreLink:
+      'https://play.google.com/store/apps/details?id=com.lightdev.weaponsurvivor',
+    appStoreLink:
+      'https://apps.apple.com/us/app/weapon-survivor/id6452628415',
+    media: [gameImg7, gameImg8, gameImg9],
+  },
+  {
+    id: 3,
     title: 'More our games',
     subTitle: '',
     googleStoreLink:
