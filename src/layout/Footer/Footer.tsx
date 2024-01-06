@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
       <div className="sub-info">
         <div className="copyright">
           <CopyrightIcon />
-          <p className="p">LightDev 2022</p>
+          <p className="p">LightDev 2024</p>
         </div>
         <Link className="policy-navlink" to={isHome ? policy : home} onClick={onNavlinkClick}>
           {isHome ? 'Policy' : 'Home'}

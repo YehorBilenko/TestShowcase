@@ -23,7 +23,7 @@ export const games: TGame[] = [
   {
     id: 2,
     title: 'Weapon Survivor',
-    subTitle: '2m+ DOWNLOADS',
+    subTitle: '3m+ DOWNLOADS',
     googleStoreLink:
       'https://play.google.com/store/apps/details?id=com.lightdev.weaponsurvivor',
     appStoreLink:
