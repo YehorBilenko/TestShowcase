@@ -2691,4 +2691,3 @@ yieldlab.net,15465081,RESELLER
 yieldmo.com,3591550211052216798,RESELLER,6a92c77cfc3d2258
 zetaglobal.net,856,RESELLER
 zmaticoo.com,5135655,RESELLER
-ownerdomain=highcore.io
